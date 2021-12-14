@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:month_days_ui/calendar/src/table_calendar.dart';
 
 class MonthDatesPage extends StatelessWidget {
   final DateTime selectedDate;
@@ -32,6 +33,12 @@ class MonthDatesPage extends StatelessWidget {
                 Text('Ya'),
                 Spacer(),
               ],
+            ),
+            const SizedBox(height: 20),
+            TableCalendar(
+              focusedDay: DateTime.now(),
+              firstDay: DateTime.utc(2010, 10, 16),
+              lastDay: DateTime.utc(2030, 3, 14),
             ),
           ],
         ),
