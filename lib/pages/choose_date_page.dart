@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:month_days_ui/month_dates_page.dart';
+import 'package:month_days_ui/pages/month_dates_page.dart';
 
 class ChooseDatePage extends StatefulWidget {
   const ChooseDatePage({Key? key}) : super(key: key);

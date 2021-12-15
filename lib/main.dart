@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:month_days_ui/choose_date_page.dart';
+import 'package:month_days_ui/pages/choose_date_page.dart';
+import 'package:month_days_ui/pages/choose_lang_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const ChooseDatePage(),
+      home: const ChooseLangPage(),
     );
   }
 }
