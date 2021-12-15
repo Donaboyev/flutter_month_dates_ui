@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:month_days_ui/pages/month_dates_page.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChooseDatePage extends StatefulWidget {
   const ChooseDatePage({Key? key}) : super(key: key);
@@ -14,13 +15,14 @@ class _ChooseDatePageState extends State<ChooseDatePage> {
 
   @override
   Widget build(BuildContext context) {
+    final T = AppLocalizations.of(context);
     return Scaffold(
       body: Column(
         children: [
           const SizedBox(height: 200),
-          const Text(
-            'Choose any date',
-            style: TextStyle(fontSize: 30),
+          Text(
+            T?.chooseAnyDate ?? '',
+            style: const TextStyle(fontSize: 30),
           ),
           SizedBox(
             height: 300,
@@ -36,7 +38,7 @@ class _ChooseDatePageState extends State<ChooseDatePage> {
             ),
           ),
           ElevatedButton(
-            child: const Text('Submit'),
+            child: Text(T?.submit ?? ''),
             onPressed: () {
               Navigator.push(
                 context,

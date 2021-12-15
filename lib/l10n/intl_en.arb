@@ -2,5 +2,13 @@
   "monthDaysUi": "Month days UI",
   "@monthDaysUi": {
     "description": "Month days UI"
+  },
+  "chooseAnyDate": "Choose any date",
+  "@chooseAnyDate": {
+    "description": "Choose any date"
+  },
+  "submit": "Submit",
+  "@submit": {
+    "description": "Submit"
   }
 }
