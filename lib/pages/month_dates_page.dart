@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:month_days_ui/calendar/src/table_calendar.dart';
+import 'package:month_days_ui/calendar/table_calendar.dart';
+import 'package:month_days_ui/data/local_source.dart';
 
 class MonthDatesPage extends StatelessWidget {
   final DateTime selectedDate;
@@ -15,30 +16,11 @@ class MonthDatesPage extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 100),
-            Row(
-              children: const [
-                Spacer(),
-                Text('Du'),
-                Spacer(),
-                Text('Se'),
-                Spacer(),
-                Text('Ch'),
-                Spacer(),
-                Text('Pa'),
-                Spacer(),
-                Text('Ju'),
-                Spacer(),
-                Text('Sh'),
-                Spacer(),
-                Text('Ya'),
-                Spacer(),
-              ],
-            ),
-            const SizedBox(height: 20),
             TableCalendar(
               focusedDay: DateTime.now(),
               firstDay: DateTime.utc(2010, 10, 16),
               lastDay: DateTime.utc(2030, 3, 14),
+              locale: LocalSource.instance.getLocaleCode(),
             ),
           ],
         ),
