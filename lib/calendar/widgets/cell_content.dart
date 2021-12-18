@@ -64,7 +64,7 @@ class CellContent extends StatelessWidget {
     final margin = calendarStyle.cellMargin;
     final padding = calendarStyle.cellPadding;
     final alignment = calendarStyle.cellAlignment;
-    final duration = const Duration(milliseconds: 250);
+    const duration = Duration(milliseconds: 250);
 
     if (isDisabled) {
       cell = calendarBuilders.disabledBuilder?.call(context, day, focusedDay) ??
@@ -155,8 +155,16 @@ class CellContent extends StatelessWidget {
             margin: margin,
             padding: padding,
             decoration: isWeekend
-                ? calendarStyle.weekendDecoration
-                : calendarStyle.defaultDecoration,
+                ? (calendarStyle.weekendDecoration ??
+                    BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: const Color(0xFFEAEAEA),
+                    ))
+                : (calendarStyle.defaultDecoration ??
+                    BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: const Color(0xFFEAEAEA),
+                    )),
             alignment: alignment,
             child: Text(
               text,

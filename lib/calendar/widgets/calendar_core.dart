@@ -93,21 +93,10 @@ class CalendarCore extends StatelessWidget {
                   _getFocusedDay(calendarFormat, previousFocusedDay, index);
             }
 
-            return Padding(
-              padding: const EdgeInsets.all(1),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(3),
-                  color: const Color(0xFFEAEAEA),
-                ),
-                height: ((constrainedRowHeight ?? rowHeight) ?? 0) - 3,
-                child: dayBuilder(context, day, baseDay),
-              ),
+            return SizedBox(
+              height: constrainedRowHeight ?? rowHeight,
+              child: dayBuilder(context, day, baseDay),
             );
-            // return SizedBox(
-            //   height: constrainedRowHeight ?? rowHeight,
-            //   child: dayBuilder(context, day, baseDay),
-            // );
           },
         );
       },

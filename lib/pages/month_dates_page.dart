@@ -21,6 +21,7 @@ class MonthDatesPage extends StatelessWidget {
               firstDay: DateTime.utc(2010, 10, 16),
               lastDay: DateTime.utc(2030, 3, 14),
               locale: LocalSource.instance.getLocaleCode(),
+              headerVisible: false,
             ),
           ],
         ),
